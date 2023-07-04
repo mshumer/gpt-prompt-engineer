@@ -15,6 +15,13 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 - **ELO Rating System**: Each prompt starts with an ELO rating of 1200. As they compete against each other in generating responses to the test cases, their ELO ratings change based on their performance. This way, you can easily see which prompts are the most effective.
 
+## Setup
+1. Open this colab LINK LINK.
+
+2. Add your OpenAI API key to the line `openai.api_key = "ADD YOUR KEY HERE"`.
+
+3. If you have GPT-4 access, you're ready to move on. If not, change `model='gpt-4'` inside `generate_candidate_prompts` to `model='gpt-3.5-turbo'`.
+
 ## How to Use
 
 1. Define your use-case and test cases. The use-case is a description of what you want the AI to do. Test cases are specific prompts that you would like the AI to respond to.
