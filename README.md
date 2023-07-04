@@ -16,6 +16,8 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 - **ELO Rating System**: Each prompt starts with an ELO rating of 1200. As they compete against each other in generating responses to the test cases, their ELO ratings change based on their performance. This way, you can easily see which prompts are the most effective.
 
+- **Weights & Biases Logging**: Optional logging to [Weights & Biases](https://wandb.ai/site) of your configs such as temperature and max tokens, the system and user prompts for each part, the test cases used and the final ranked ELO rating for each candidate prompt. Set `use_wandb` to `True` to use.
+
 ## Setup
 1. [Open the notebook in Google Colab](https://colab.research.google.com/drive/12-tefxwf2VvZp5F-XJA0xQh9mSX4RE9L?usp=sharing) or in a local Jupyter notebook.
 
