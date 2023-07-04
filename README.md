@@ -9,9 +9,10 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 ## Features
 
-- **Prompt Generation**: Using GPT-4 and GPT-3.5-Turbo, `gpt-prompt-engineer` can generate a plethora of prompts based on a provided use-case and test cases.
+- **Prompt Generation**: Using GPT-4 and GPT-3.5-Turbo, `gpt-prompt-engineer` can generate a variety of possible prompts based on a provided use-case and test cases.
 
 - **Prompt Testing**: The real magic happens after the generation. The system tests each prompt against all the test cases, comparing their performance and ranking them using an ELO rating system.
+<img width="1563" alt="Screen Shot 2023-07-04 at 11 41 54 AM" src="https://github.com/mshumer/gpt-prompt-engineer/assets/41550495/f8171cff-1703-40ca-b9fd-f0aa24d07110">
 
 - **ELO Rating System**: Each prompt starts with an ELO rating of 1200. As they compete against each other in generating responses to the test cases, their ELO ratings change based on their performance. This way, you can easily see which prompts are the most effective.
 
@@ -28,12 +29,13 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 2. Choose how many prompts to generate. Keep in mind, this can get expensive if you generate many prompts. 10 is a good starting point.
 
-3. Call `generate_candidate_prompts(description, test_cases, number_of_prompts)` to generate a list of potential prompts.
+3. Call `generate_optimal_prompt(description, test_cases, number_of_prompts)` to generate a list of potential prompts, and test and rate their performance.
 
-4. Pass the generated prompts to `test_candidate_prompts(test_cases, description, prompts)` to test and rate their performance.
-
-5. The final ELO ratings will be printed in a table, sorted in descending order. The higher the rating, the better the prompt.
-
-## Conclusion
-
-With `gpt-prompt-engineer`, your search for the best possible prompt becomes a structured and efficient process. It's an experimentation tool that brings a method to the madness, a compass in the uncharted territory of prompt engineering. Happy experimenting!
+4. The final ELO ratings will be printed in a table, sorted in descending order. The higher the rating, the better the prompt.
+```+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+
+|                                                                                                                                                                                                                                                                                                  Prompt                                                                                                                                                                                                                                                                                                  |       Rating       |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+
+|                                                                                         Your task is to generate a catchy and engaging headline for a landing page. You will be given a brief description of the product, service, or concept that needs to be promoted. Your headline should be persuasive, concise, and highlight the unique selling point or main benefit of what's being promoted. Remember, a good headline can make a significant difference in attracting potential clients or customers.                                                                                         | 1233.4753616256708 |
+|                                                                            Given a brief sentence or phrase describing a product, service, or theme, your task is to generate a catchy, persuasive headline for a landing page. The headline should not only encapsulate the main idea succinctly but should also inspire curiosity, interest, and excitement in potential customers or audience members. Remember, a powerful headline is the first impression and the doorway to the content or offering you're promoting.                                                                             | 1190.2438134923411 |
+| Your task is to generate a compelling and attention-grabbing headline for a landing page. You'll be given a brief description or prompt about the subject, such as a new product, service, blog, or app. Your headline should succinctly capture the essence of the subject and stimulate the interest of potential visitors or customers. Use your creativity and marketing skills to create headlines that appeal to your audience's needs, desires, or curiosity. Please remember that your output should be a single sentence that effectively communicates the unique selling point of the subject. | 1176.280824881988  |
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+```
