@@ -1,5 +1,5 @@
 # gpt-prompt-engineer
-[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_)
+[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1c7V3kVaDUMMN2_xD9WFmlfBNYmpAjnip?usp=sharing)
 
 ## Overview
 
@@ -17,7 +17,7 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 - **ELO Rating System**: Each prompt starts with an ELO rating of 1200. As they compete against each other in generating responses to the test cases, their ELO ratings change based on their performance. This way, you can easily see which prompts are the most effective.
 
 ## Setup
-1. [Open the noteboook in Google Colab]([url](https://colab.research.google.com/drive/1c7V3kVaDUMMN2_xD9WFmlfBNYmpAjnip?usp=sharing)) or in a local Jupyter notebook.
+1. [Open the notebook in Google Colab](https://colab.research.google.com/drive/1c7V3kVaDUMMN2_xD9WFmlfBNYmpAjnip?usp=sharing) or in a local Jupyter notebook.
 
 2. Add your OpenAI API key to the line `openai.api_key = "ADD YOUR KEY HERE"`.
 
@@ -73,3 +73,13 @@ test_cases = [
 
 
 ## Contributions are welcome!!
+
+## License
+
+This project is [MIT](https://github.com/your_username/your_repository/blob/master/LICENSE) licensed.
+
+## Contact
+
+Matt Shumer - [@mattshumer_](https://twitter.com/mattshumer_)
+
+Project Link: [https://github.com/mshumer/gpt-prompt-engineer](url)
