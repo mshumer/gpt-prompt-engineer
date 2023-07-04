@@ -17,7 +17,7 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 - **ELO Rating System**: Each prompt starts with an ELO rating of 1200. As they compete against each other in generating responses to the test cases, their ELO ratings change based on their performance. This way, you can easily see which prompts are the most effective.
 
 ## Setup
-1. Open this colab LINK LINK.
+1. [Open the noteboook in Google Colab]([url](https://colab.research.google.com/drive/1c7V3kVaDUMMN2_xD9WFmlfBNYmpAjnip?usp=sharing)) or in a local Jupyter notebook.
 
 2. Add your OpenAI API key to the line `openai.api_key = "ADD YOUR KEY HERE"`.
 
@@ -25,13 +25,50 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 ## How to Use
 
-1. Define your use-case and test cases. The use-case is a description of what you want the AI to do. Test cases are specific prompts that you would like the AI to respond to.
+1. Define your use-case and test cases. The use-case is a description of what you want the AI to do. Test cases are specific prompts that you would like the AI to respond to. For example:
 
-2. Choose how many prompts to generate. Keep in mind, this can get expensive if you generate many prompts. 10 is a good starting point.
+```
+description = "Given a prompt, generate a landing page headline." # this style of description tends to work well
 
-3. Call `generate_optimal_prompt(description, test_cases, number_of_prompts)` to generate a list of potential prompts, and test and rate their performance.
+test_cases = [
+    {
+        'prompt': 'Promoting an innovative new fitness app, Smartly',
+    },
+    {
+        'prompt': 'Why a vegan diet is beneficial for your health',
+    },
+    {
+        'prompt': 'Introducing a new online course on digital marketing',
+    },
+    {
+        'prompt': 'Launching a new line of eco-friendly clothing',
+    },
+    {
+        'prompt': 'Promoting a new travel blog focusing on budget travel',
+    },
+    {
+        'prompt': 'Advertising a new software for efficient project management',
+    },
+    {
+        'prompt': 'Introducing a new book on mastering Python programming',
+    },
+    {
+        'prompt': 'Promoting a new online platform for learning languages',
+    },
+    {
+        'prompt': 'Advertising a new service for personalized meal plans',
+    },
+    {
+        'prompt': 'Launching a new app for mental health and mindfulness',
+    }
+]
+```
 
-4. The final ELO ratings will be printed in a table, sorted in descending order. The higher the rating, the better the prompt.
+3. Choose how many prompts to generate. Keep in mind, this can get expensive if you generate many prompts. 10 is a good starting point.
+
+4. Call `generate_optimal_prompt(description, test_cases, number_of_prompts)` to generate a list of potential prompts, and test and rate their performance.
+
+5. The final ELO ratings will be printed in a table, sorted in descending order. The higher the rating, the better the prompt.
 <img width="1074" alt="Screen Shot 2023-07-04 at 11 48 45 AM" src="https://github.com/mshumer/gpt-prompt-engineer/assets/41550495/324f90b8-c0ee-45fd-b219-6c44d9aa281b">
 
 
