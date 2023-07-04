@@ -1,5 +1,5 @@
 # gpt-prompt-engineer
-[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_) [![Open In Colab]([https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12-tefxwf2VvZp5F-XJA0xQh9mSX4RE9L?usp=sharing)
+[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12-tefxwf2VvZp5F-XJA0xQh9mSX4RE9L?usp=sharing)
 
 ## Overview
 
