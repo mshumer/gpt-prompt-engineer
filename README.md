@@ -1,5 +1,6 @@
 # gpt-prompt-engineer
-[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/12-tefxwf2VvZp5F-XJA0xQh9mSX4RE9L?usp=sharing)
+[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mshumer/gpt-prompt-engineer/blob/main/gpt_prompt_engineer.ipynb)
+
 
 ## Overview
 
@@ -19,11 +20,11 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 - **Weights & Biases Logging**: Optional logging to [Weights & Biases](https://wandb.ai/site) of your configs such as temperature and max tokens, the system and user prompts for each part, the test cases used and the final ranked ELO rating for each candidate prompt. Set `use_wandb` to `True` to use.
 
 ## Setup
-1. [Open the notebook in Google Colab](https://colab.research.google.com/drive/12-tefxwf2VvZp5F-XJA0xQh9mSX4RE9L?usp=sharing) or in a local Jupyter notebook.
+1. [Open the notebook in Google Colab](https://colab.research.google.com/github/mshumer/gpt-prompt-engineer/blob/main/gpt_prompt_engineer.ipynb) or in a local Jupyter notebook.
 
 2. Add your OpenAI API key to the line `openai.api_key = "ADD YOUR KEY HERE"`.
 
-3. If you have GPT-4 access, you're ready to move on. If not, change `model='gpt-4'` inside `generate_candidate_prompts` to `model='gpt-3.5-turbo'`.
+3. If you have GPT-4 access, you're ready to move on. If not, change `CANDIDATE_MODEL='gpt-4'` to `CANDIDATE_MODEL='gpt-3.5-turbo'`.
 
 ## How to Use
 
