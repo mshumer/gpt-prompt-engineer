@@ -74,7 +74,9 @@ test_cases = [
 <img width="1074" alt="Screen Shot 2023-07-04 at 11 48 45 AM" src="https://github.com/mshumer/gpt-prompt-engineer/assets/41550495/324f90b8-c0ee-45fd-b219-6c44d9aa281b">
 
 
-## Contributions are welcome!!
+## Contributions are welcome! Some ideas:
+- have a number of different system prompt generators that create different styles of prompts, to cover more ground (ex. examples, verbose, short, markdown, etc.)
+- automatically generate the test cases
 
 ## License
 
