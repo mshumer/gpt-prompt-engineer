@@ -1,5 +1,5 @@
 # gpt-prompt-engineer
-[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_) [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mshumer/gpt-prompt-engineer/blob/main/gpt_prompt_engineer.ipynb)
+[![Twitter Follow](https://img.shields.io/twitter/follow/mattshumer_?style=social)](https://twitter.com/mattshumer_) [![Open Main Version In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/mshumer/gpt-prompt-engineer/blob/main/gpt_prompt_engineer.ipynb) [![Open Classification Version In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16NLMjqyuUWxcokE_NF6RwHD8grwEeoaJ?usp=sharing)
 
 
 ## Overview
@@ -17,14 +17,17 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 - **ELO Rating System**: Each prompt starts with an ELO rating of 1200. As they compete against each other in generating responses to the test cases, their ELO ratings change based on their performance. This way, you can easily see which prompts are the most effective.
 
-- **Weights & Biases Logging**: Optional logging to [Weights & Biases](https://wandb.ai/site) of your configs such as temperature and max tokens, the system and user prompts for each part, the test cases used and the final ranked ELO rating for each candidate prompt. Set `use_wandb` to `True` to use.
+- **Classification Version**: The `gpt-prompt-engineer -- Classification Version` notebook is designed to handle classification tasks. It evaluates the correctness of a test case by matching it to the expected output ('true' or 'false') and provides a table with scores for each prompt.
+<img width="1607" alt="Screen Shot 2023-07-10 at 5 22 24 PM" src="https://github.com/mshumer/gpt-prompt-engineer/assets/41550495/d5c9f2a8-97fa-445d-9c38-dec744f77854">
+
+- **Weights & Biases Logging**: Optional logging to [Weights & Biases](https://wandb.ai/site) of your configs such as temperature and max tokens, the system and user prompts for each part, the test cases used and the final ranked ELO rating for each candidate prompt. Set `use_wandb` to `True` to use. Only available in the main `gpt-prompt-engineer` notebook for now.
 
 ## Setup
-1. [Open the notebook in Google Colab](https://colab.research.google.com/github/mshumer/gpt-prompt-engineer/blob/main/gpt_prompt_engineer.ipynb) or in a local Jupyter notebook.
+1. [Open the notebook in Google Colab](https://colab.research.google.com/github/mshumer/gpt-prompt-engineer/blob/main/gpt_prompt_engineer.ipynb) or in a local Jupyter notebook. For classification, use [this one.](https://colab.research.google.com/drive/16NLMjqyuUWxcokE_NF6RwHD8grwEeoaJ?usp=sharing)
 
 2. Add your OpenAI API key to the line `openai.api_key = "ADD YOUR KEY HERE"`.
 
-3. If you have GPT-4 access, you're ready to move on. If not, change `CANDIDATE_MODEL='gpt-4'` to `CANDIDATE_MODEL='gpt-3.5-turbo'`.
+3. If you have GPT-4 access, you're ready to move on. If not, change `CANDIDATE_MODEL='gpt-4'` to `CANDIDATE_MODEL='gpt-3.5-turbo'`. If you're using the classification version, and don't have GPT-4 access, change `model='gpt-4'` in the second cell to `model='gpt-3.5-turbo'.
 
 ## How to Use
 
@@ -67,17 +70,35 @@ test_cases = [
 ]
 ```
 
+For the classification version, your test cases should be in the format:
+
+```
+test_cases = [
+    {
+        'prompt': 'I had a great day!',
+        'output': 'true'
+    },
+    {
+        'prompt': 'I am feeling gloomy.',
+        'output': 'false'
+    },
+    // add more test cases here
+]
+```
+
 3. Choose how many prompts to generate. Keep in mind, this can get expensive if you generate many prompts. 10 is a good starting point.
 
-4. Call `generate_optimal_prompt(description, test_cases, number_of_prompts)` to generate a list of potential prompts, and test and rate their performance.
+4. Call `generate_optimal_prompt(description, test_cases, number_of_prompts)` to generate a list of potential prompts, and test and rate their performance. For the classification version, just run the last cell.
 
 5. The final ELO ratings will be printed in a table, sorted in descending order. The higher the rating, the better the prompt.
 <img width="1074" alt="Screen Shot 2023-07-04 at 11 48 45 AM" src="https://github.com/mshumer/gpt-prompt-engineer/assets/41550495/324f90b8-c0ee-45fd-b219-6c44d9aa281b">
 
+For the classification version, the scores for each prompt will be printed in a table (see the image above).
 
 ## Contributions are welcome! Some ideas:
 - have a number of different system prompt generators that create different styles of prompts, to cover more ground (ex. examples, verbose, short, markdown, etc.)
 - automatically generate the test cases
+- expand the classification version to support more than two classes using tiktoken
 
 ## License
 
