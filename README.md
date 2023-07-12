@@ -28,7 +28,7 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 2. Add your OpenAI API key to the line `openai.api_key = "ADD YOUR KEY HERE"`.
 
-3. If you have GPT-4 access, you're ready to move on. If not, change `CANDIDATE_MODEL='gpt-4'` to `CANDIDATE_MODEL='gpt-3.5-turbo'`. If you're using the classification version, and don't have GPT-4 access, change `model='gpt-4'` in the second cell to `model='gpt-3.5-turbo'.
+3. If you have GPT-4 access, you're ready to move on. If not, change `CANDIDATE_MODEL='gpt-4'` to `CANDIDATE_MODEL='gpt-3.5-turbo'`. If you're using the classification version, and don't have GPT-4 access, change `model='gpt-4'` in the second cell to `model='gpt-3.5-turbo'`.
 
 ## How to Use
 
