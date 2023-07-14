@@ -110,3 +110,5 @@ This project is [MIT](https://github.com/your_username/your_repository/blob/mast
 Matt Shumer - [@mattshumer_](https://twitter.com/mattshumer_)
 
 Project Link: [https://github.com/mshumer/gpt-prompt-engineer](url)
+
+Lastly, if you want to try something even cooler than this, sign up for [Personal Assistant](https://www.hyperwriteai.com/personal-assistant) (most of my time is spent on this). It's basically an AI that can operate your web browser to complete tasks for you.
