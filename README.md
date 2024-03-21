@@ -7,8 +7,11 @@ Prompt engineering is kind of like alchemy. There's no clear way to predict what
 
 **Simply input a description of your task and some test cases, and the system will generate, test, and rank a multitude of prompts to find the ones that perform the best.**
 
-## *New: The Claude 3 Opus Version*
+## *New 3/20/24: The Claude 3 Opus Version*
 I've added a new version of gpt-prompt-engineer that takes full advantage of Anthropic's Claude 3 Opus model. This version auto-generates test cases and allows for the user to define multiple input variables, making it even more powerful and flexible. Try it out with the claude-prompt-engineer.ipynb notebook in the repo!
+
+## *New 3/20/24: Claude 3 Opus -> Haiku Conversion Version*
+This notebook enables you to build lightning-fast, performant AI systems at a fraction of the typical cost. By using Claude 3 Opus to establish the latent space and Claude 3 Haiku for the actual generation, you can achieve amazing results. The process works by leveraging Opus to produce a collection of top-notch examples, which are then used to guide Haiku in generating output of comparable quality while dramatically reducing both latency and cost per generation.
 
 ## Features
 
@@ -23,6 +26,8 @@ I've added a new version of gpt-prompt-engineer that takes full advantage of Ant
 <img width="1607" alt="Screen Shot 2023-07-10 at 5 22 24 PM" src="https://github.com/mshumer/gpt-prompt-engineer/assets/41550495/d5c9f2a8-97fa-445d-9c38-dec744f77854">
 
 - **Claude 3 Version**: The claude-prompt-engineer notebook is designed to work with Anthropic's Claude 3 Opus model. It auto-generates test cases and allows for multiple input variables, making it even more powerful and flexible.
+
+- **Claude 3 Opus -> Haiku Conversion Version**: Designed to preserve Opus' quality for your use-case while getting the speed + cost benefits of using Haiku.
 
 - **[Weights & Biases](https://wandb.ai/site/prompts) Logging**: Optional logging to [Weights & Biases](https://wandb.ai/site) of your configs such as temperature and max tokens, the system and user prompts for each part, the test cases used and the final ranked ELO rating for each candidate prompt. Set `use_wandb` to `True` to use. 
 
