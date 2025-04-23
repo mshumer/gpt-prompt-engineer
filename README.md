@@ -135,4 +135,4 @@ Project Link: [https://github.com/mshumer/gpt-prompt-engineer](url)
 
 Lastly, if you want to try something even cooler than this, sign up for [HyperWrite Personal Assistant](https://app.hyperwriteai.com/personalassistant) (most of my time is spent on this). It's basically an AI with access to real-time information that a) is incredible at writing naturally, and b) can operate your web browser to complete tasks for you.
 
-Head to [ShumerPrompt](ShumerPrompt.com), my "Github for Prompts"!
+Head to [ShumerPrompt](https://ShumerPrompt.com), my "Github for Prompts"!
